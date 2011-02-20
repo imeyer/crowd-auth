@@ -11,9 +11,9 @@ module Crowd
     end
     
     def authenticate(username, password)
-      rest_client = RestClient::Resource.new "#{@crowd_url}?username=#{username}", :user => @crowd_app_name, :password => @crowd_app_pass
+      rest_client = RestClient::Resource.new "#{@crowd_url}", :user => @crowd_app_name, :password => @crowd_app_pass
       
-      resp = rest_client[@crowd_auth_uri].post "{\"value\":\"#{password}\"}", :accept => "application/json", :content_type => "application/json"
+      resp = rest_client["#{@crowd_auth_uri}?username=#{username}"].post "{\"value\":\"#{password}\"}", :accept => "application/json", :content_type => "application/json"
       
       return resp
     end
