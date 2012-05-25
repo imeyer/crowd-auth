@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform      = Gem::Platform::RUBY
   s.authors       = ["Ian Meyer"]
   s.email         = ["ianmmeyer@gmail.com"]
-  s.homepage      = ""
+  s.homepage      = "https://github.com/imeyer/crowd-auth"
   s.summary       = %q{Simple authentication against Atlassian Crowd}
   s.description   = %q{Simple authentication against Atlassian Crowd}
 
